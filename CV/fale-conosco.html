@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <title>Fale Conosco</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Leandro Cabeda Rigo">
+
+</head>
+
+<body>
+    <header>
+        <figure>
+            <img width="400px" height="300px" border="3" title="placa de video" src="assets/img/pvideo01.jpg" alt="Pla de Video">
+        </figure>
+        <h1>Leandro Cabeda Rigo</h1>
+        <nav>
+            <ul>
+                <li>
+                    <a href="CVonline.html">Curriculum Vitae</a>
+                </li>
+                <li>
+                    <a href="fale-conosco.html">Fale Conosco</a>
+                </li>
+                <li>
+                    <a href="https://github.com/leandro-cabeda?tab=repositories" target="_blank">Projetos Pessoais</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <section>
+        <h2>Fale Conosco</h2>
+        <form action="" method="get">
+            <div>
+                <label for="name">Nome:</label>
+                <input type="text" name="" id="name" required>
+            </div>
+            <div>
+                <label for="email">Email:</label>
+                <input type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" name="" id="email" required>
+            </div>
+            <div>
+                <label>
+                    <input type="radio" name="sex" id="sex" value="m">Masculino
+                </label>
+                <label>
+                    <input type="radio" name="sex" id="sex" value="f">Feminino
+                </label>
+                <label>
+                    <input type="radio" name="sex" id="sex" value="o">Outros
+                </label>
+
+            </div>
+            <div>
+                <label for="website">Web Site:</label>
+                <input type="url" pattern="https?://.+" name="" id="website">
+            </div>
+            <div>
+                <label for="phone">Telefone:</label>
+                <input type="tel" pattern="[0-9]{9,9}" name="phone" id="phone" required>
+            </div>
+            <div>
+                <label for="city">Cidade:</label>
+                <input type="text" pattern="[A-Za-z]{3}" name="" id="city" required>
+            </div>
+            <div>
+                <label for="state">Estado:</label>
+                <select name="" id="state" required>
+                    <option value="RS">RS</option>
+                    <option value="SC">SC</option>
+                    <option value="PR">PR</option>
+                    <option value="SP">SP</option>
+                </select>
+            </div>
+            <div>
+                <label for="subject">Assunto:</label>
+                <select name="" id="subject" required>
+                    <option value="sugestao">Sugestão</option>
+                    <option value="critica">Critica</option>
+                </select>
+            </div>
+            <div>
+                <label for="archive">Arquivo</label>
+                <input type="file" id="archive">
+            </div>
+            <div>
+                <label for="message">Mensagem:</label><br>
+                <textarea rows="5" cols="30" maxlength="30" id="message" placeholder="Escreva sua mensagem"></textarea>
+            </div>
+            <button type="submit">Enviar</button>
+            <button type="reset">Cancelar</button>
+        </form>
+    </section>
+    >
+
+</body>
+
+</html>
