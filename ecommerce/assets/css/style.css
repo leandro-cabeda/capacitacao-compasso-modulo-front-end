@@ -1,0 +1,307 @@
+/* Reset do CSS*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: content-box;
+}
+
+
+/* Corpo do body*/
+
+body {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 14px;
+}
+
+
+/* Cabeçalho*/
+
+.container-header {
+    width: 100%;
+    float: left;
+    clear: both;
+    margin-bottom: 5px;
+}
+
+.container-header .container {
+    width: 100%;
+    float: left;
+    clear: both;
+    background: gray;
+}
+
+.container-header .container .menu {
+    width: 20%;
+    background: black;
+    float: right;
+    margin-bottom: 40px;
+    margin-right: 90px;
+}
+
+.container-header .container .menu .container-menu {
+    width: 100%;
+}
+
+.container-header .container .menu .container-menu .item {
+    padding: 0 30px 30px 5px;
+    list-style: none;
+    float: right;
+    margin-top: 10px;
+    height: 10px;
+}
+
+.link {
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+    text-transform: uppercase;
+    color: white;
+}
+
+.link:hover {
+    color: red;
+}
+
+.container-header .container .logo {
+    float: left;
+    padding: 40px 30px 30px 110px;
+}
+
+.container-header .container .logo img {
+    width: 90%;
+    height: 60%;
+    border: 1px solid black;
+}
+
+.container-header .container .form {
+    float: left;
+    width: 60%;
+    padding-left: 50px;
+}
+
+.container-header .container .form input {
+    height: 40px;
+    width: 100%;
+    font-size: 35px;
+    border: 1px solid black;
+}
+
+.container-header .menu-categoria {
+    width: 100%;
+}
+
+.container-header .menu-categoria .container-categoria {
+    list-style: none;
+    float: left;
+    width: 100%;
+    height: 40px;
+    background: black;
+}
+
+.container-header .menu-categoria .container-categoria .item-categoria {
+    width: calc(100%/6);
+    text-align: center;
+    float: left;
+    margin-top: 8px;
+}
+
+.container-header .menu-categoria .container-categoria .item-categoria .lin {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+}
+
+.container-header .menu-categoria .container-categoria .item-categoria .lin:hover {
+    color: red;
+}
+
+
+/* Corpo */
+
+.container-content {
+    float: left;
+    clear: both;
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.container-content .container-main {
+    float: left;
+    clear: both;
+    width: 100%;
+}
+
+.container-content .container-main img {
+    float: left;
+    height: 400px;
+    width: 50%;
+    margin-right: 30px;
+}
+
+.container-content .container-main h1 {
+    font-size: 80px;
+}
+
+.container-content .container-main p {
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+.container-content .container-main h3 {
+    font-size: 50px;
+    margin-top: 20px;
+}
+
+.container-main {
+    margin-top: 20px;
+}
+
+.container-main h1 {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.container-main .lista-produtos {
+    list-style: none;
+    float: left;
+    margin-top: 40px;
+}
+
+.container-main .lista-produtos .lista-item {
+    float: left;
+    width: 28%;
+    margin-left: 50px;
+}
+
+.container-main .lista-produtos .lista-item img {
+    float: left;
+    width: 280px;
+    height: 300px;
+    margin-bottom: 20px;
+}
+
+.container-main .lista-produtos .lista-item p {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+.container-main .lista-vendido {
+    list-style: none;
+    float: left;
+}
+
+.container-main .lista-vendido .lista-vendido-item {
+    float: left;
+    width: 28%;
+    margin-left: 50px;
+    margin-top: 40px;
+}
+
+.container-main .lista-vendido .lista-vendido-item img {
+    float: left;
+    width: 280px;
+    height: 300px;
+    margin-bottom: 20px;
+}
+
+.container-main .lista-vendido .lista-vendido-item p {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+#h {
+    font-size: 40px;
+}
+
+#n {
+    font-size: 40px;
+}
+
+figcaption {
+    font-size: 50px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+
+/* Rodapé*/
+
+.rodape-container {
+    width: 100%;
+    float: left;
+    height: 300px;
+    margin-top: 50px;
+}
+
+.rodape-container .rodape-detalhe {
+    width: 33%;
+    float: left;
+    height: 90%;
+    background: gray;
+}
+
+.rodape-container .rodape-detalhe h2 {
+    text-align: center;
+    width: 100%;
+    float: left;
+    margin-top: 30px;
+    color: white;
+    font-size: 35px;
+}
+
+.rodape-container .rodape-detalhe .rodape-lista {
+    list-style: none;
+    display: block;
+    float: left;
+    width: 100%;
+}
+
+.rodape-container .rodape-detalhe .rodape-lista .rodape-item {
+    margin-left: 28%;
+    margin-top: 20px;
+}
+
+.rodape-container .rodape-detalhe .rodape-lista .rodape-item a {
+    text-decoration: none;
+    color: white;
+}
+
+.rodape-container .rodape-detalhe .rodape-assinar {
+    float: left;
+    width: 100%;
+    padding-left: 50px;
+}
+
+.rodape-container .rodape-detalhe .rodape-assinar input {
+    height: 40px;
+    width: 80%;
+    font-size: 35px;
+    border: 1px solid black;
+    margin-top: 20px;
+    float: left;
+}
+
+.rodape-container .rodape-detalhe .rodape-icon {
+    float: left;
+}
+
+.rodape-container .rodape-detalhe .rodape-icon img {
+    width: 40px;
+    margin-left: 50px;
+    margin-top: 20px;
+}
+
+.rodape-container .rodape-direitos {
+    background: black;
+    width: 99%;
+    height: 100%;
+}
+
+.rodape-container .rodape-direitos p {
+    color: white;
+    text-align: center;
+}
