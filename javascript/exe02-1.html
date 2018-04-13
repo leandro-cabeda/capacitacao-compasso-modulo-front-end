@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+        #container-resultado {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <form action="#" id="frm-busca">
+        <input type="search" id="campo-busca">
+
+    </form>
+
+    <div id="container-resultado">
+        <h2>Resultado de Busca</h2>
+        <div id="sugestoes-produtos"></div>
+        <div id="resultado-busca"></div>
+    </div>
+
+    <script>
+        "use strict"; // obriga inicializar todas as variaveis
+        var debug = true;
+        var campo_busca = document.getElementById("campo-busca");
+        var container_resultado = document.getElementById("container-resultado");
+        var sugestoes_produtos = document.getElementById("sugestoes-produtos");
+        var resultado_busca = document.getElementById("resultado-busca");
+
+        // array de sugestoes produtos
+        var aray_sugestoes_produtos = [
+            "Detergente",
+            "Cafe",
+            "Erva",
+            "Cerveja"
+
+        ];
+
+        // array resultado de busca
+        var aray_resultado_busca = [{
+                "nome": " Computador Dell",
+                "descricao": "texto  texto texto",
+                "img": "https://a-static.mlcdn.com.br/618x463/computador-all-in-one-dell-ione-3464-a20-intel-core-i5-4gb-1tb-led-238-windows-10/magazineluiza/217527400/085eb8ea318c64b82d66d307dd9b8314.jpg",
+                "link": "http://compasso.com.br",
+                "preco": 10.5
+            }, {
+                "nome": " Notebook HP",
+                "descricao": "texto2  texto2 texto2",
+                "img": "https://i1.zst.com.br/images/notebook-dell-inspiron-5000-intel-core-i7-7500u-7-geracao-8gb-de-ram-hd-1-tb-15-6-radeon-r7-m440-windows-10-i15-5566-a70b-photo193180572-12-2a-29.jpg",
+                "link": "http://compasso.com.br",
+                "preco": 30.50
+            }, {
+                "nome": " Placa de Video Geforce",
+                "descricao": "texto2  texto2 texto2",
+                "img": "http://hardware.rbtech.info/files/2012/12/asus-gtx.jpg",
+                "link": "http://compasso.com.br",
+                "preco": 56.70
+            }
+
+        ];
+
+        cl(aray_resultado_busca);
+
+
+        //renderizaSugestoes();
+
+        /*var endereco = {
+            "cep": "99010-170",
+            "logradouro": "Rua Lava Pés",
+            "complemento": "(Lot Wolmar Salton)",
+            "bairro": "Centro",
+            "localidade": "Passo Fundo",
+            "uf": "RS",
+            "unidade": "",
+            "ibge": "4314100",
+            "gia": "",
+            "getLocalidade": function() {
+                this.localidade;
+            }
+        }
+
+        var localidade = endereco.getLocalidade();
+        console.log(localidade);*/
+
+        function cl(msg) {
+            if (debug) console.log(msg);
+        }
+        campo_busca.onfocus = function() {
+            cl("Entrou no campo");
+            container_resultado.style.display = "block"; // deixa o elemento do display mostrando
+            if (this.value.length === 0) {
+                cl("exibe sugestoes e esconde lista");
+                sugestoes_produtos.style.display = "block";
+                resultado_busca.style.display = "none";
+            } else {
+                cl("exibe lista e esconde sugestoes");
+                sugestoes_produtos.style.display = "none";
+                resultado_busca.style.display = "block";
+
+            }
+        }
+
+        campo_busca.onblur = function() {
+            cl("Saiu no campo");
+            if (this.value.length === 0)
+                container_resultado.style.display = "none"; // deixa o elemento do display oculto
+            //sugestoes_produtos.innerHTML = "";
+        }
+
+        campo_busca.onkeyup = function() {
+            cl("Entrou no campo");
+            container_resultado.style.display = "block"; // deixa o elemento do display mostrando
+            if (this.value.length === 0) {
+                cl("exibe sugestoes e esconde lista");
+                sugestoes_produtos.style.display = "block";
+                resultado_busca.style.display = "none";
+            } else {
+                cl("exibe lista e esconde sugestoes");
+                sugestoes_produtos.style.display = "none";
+                resultado_busca.style.display = "block";
+
+            }
+        }
+
+        function renderizaSugestoes() {
+            var retorno = "";
+            for (var i in aray_sugestoes_produtos) {
+                //cl(aray_sugestoes_produtos[i]);
+                //retorno += "<h2>" + aray_sugestoes_produtos[i] + "</h2>";
+                //cl(retorno);
+                sugestoes_produtos.innerHTML += "<h2>" + aray_sugestoes_produtos[i] + "</h2>";
+
+            }
+            //sugestoes_produtos.innerHTML=retorno;
+        }
+
+        function renderizaResultadobusca() {
+            var retorno = "";
+
+            for (var i in aray_resultado_busca) {
+                retorno += "<div>" +
+                    "<h3>" + aray_resultado_busca[i].nome + "</h3>" +
+                    "<p>" + aray_resultado_busca[i].descricao + "</p>" +
+                    "<p>" + aray_resultado_busca[i].preco + "</p>" +
+                    "<a href='" + aray_resultado_busca[i].link + "'>Veja mais</a><br>" +
+                    "<img src='" + aray_resultado_busca[i].img + "'>" +
+                    "</div>";
+            }
+            resultado_busca.innerHTML = retorno;
+        }
+
+
+        renderizaSugestoes();
+        renderizaResultadobusca();
+    </script>
+
+</body>
+
+</html>
