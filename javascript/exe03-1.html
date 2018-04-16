@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .hide {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <input type="text" id="txt_nome">
+    <div id="produtos"></div>
+    <div class="msg-sucesso hide">
+        Cadastro efetuado com sucesso!
+    </div><br><br>
+    <div id="frm_cadastros">
+        <form class="js-frm-cadastro">
+            <label>Nome:</label><br>
+            <input type="text" id="txt_nome" placeholder="Titulo produto"><br>
+            <label>Preço:</label><br>
+            <input type="text" id="txt_preco" placeholder="preço"><br>
+            <button type="submit" id="ancora">Cadastrar</button>
+        </form>
+    </div>
+
+
+    <script src="jquery.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
